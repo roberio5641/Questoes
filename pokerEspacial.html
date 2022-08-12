@@ -1,0 +1,30 @@
+<script>
+
+var nipes = ['C', 'E', 'O', 'P'];
+var numeros = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+
+var jogador1;
+var jogador2;
+
+var cartas = 5;
+
+
+document.write("Jogador 1:")
+
+for(var i = 0; i < cartas;i++){
+    var maoNipe = nipes[Math.floor(Math.random() * 4)]
+    var maoNumero = numeros[Math.floor(Math.random() * numeros.length)]; 
+
+    document.write( maoNipe + maoNumero + "  ");
+}
+
+document.write("<br> Jogador 2:")
+
+for(var i = 0; i < cartas;i++){
+    var maoNipe = nipes[Math.floor(Math.random() * 4)]
+    var maoNumero = numeros[Math.floor(Math.random() * numeros.length)]; 
+
+    document.write( maoNipe + maoNumero + "  ");
+}
+
+</script>

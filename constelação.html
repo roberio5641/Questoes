@@ -1,0 +1,71 @@
+<script>
+
+
+    var qtdMat = parseInt(prompt("tamanho da matriz(min = 4, max = 8)")) 
+
+
+    var estrela1 = parseInt(prompt("qual a primeira estrela"))
+    var estrela2 = parseInt(prompt("qual a segunda estrela"))
+    
+    var matriz = new Array(qtdMat)
+    
+    for (var i = 0; i < matriz.length; i++){
+        matriz[i] = new Array(qtdMat)
+    }
+    
+    
+    for(var i = 0; i < qtdMat; i++){
+        for(var j = 0; j < qtdMat; j++){
+            matriz[i][j] = getRandom()
+            
+            var linha = matriz[estrela1]
+            var linha2 = matriz[estrela2]
+            
+    }
+    }
+    
+        
+    
+    for (var i = 0; i < qtdMat; i++) {
+            for (var j = 0; j < qtdMat; j++)    {
+                document.write(matriz[i][j] + " ");
+            }
+            document.write("<br>");
+        }
+    
+    
+    document.write("<br>");
+    document.write("Estrela" + " " + estrela1 + ": " + linha)
+    document.write("<br>");
+    document.write("Estrela" + " " + estrela2 + ": " + linha2)
+    document.write("<br>");
+    
+    
+
+    
+    
+    for(var i = 0; i < linha.length; i++){
+        for(var j = 0; i < linha2.length; i++){
+            var n = 0
+
+            if (linha[i] == linha2[i]){
+                n++
+                if (n <= 1){
+                document.write("Há ligação <br>")
+                }
+            }else {
+                document.write("Não há ligação <br>")
+            }
+
+        }
+    }
+    
+    
+    
+    function getRandom(){
+        return Math.floor(Math.random() * 2)
+    }
+    
+    
+    
+    </script>
